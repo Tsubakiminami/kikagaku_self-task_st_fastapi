@@ -96,6 +96,7 @@ print('This main.py code for FastAPI starts.',  datetime.now())
 from fastapi import FastAPI, File, UploadFile, Response
 from PIL import Image
 import io
+import os
 
 # FastAPIのインスタンスを作る
 app = FastAPI()
@@ -105,6 +106,10 @@ import my1_cvtmnist as my_cvtmnist
 import my2_cnn as my_cnn
 import my3_predictX as my_predict
 
+# 作業フォルダ作成
+dir_temp_img = 'temp_img'
+if not os.path.exists(dir_temp_img):
+  os.makedirs(dir_temp_img)
 
 # ルートでの返信
 @app.get('/')
