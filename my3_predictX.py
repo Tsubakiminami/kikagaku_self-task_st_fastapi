@@ -38,18 +38,19 @@ num_epochs = 2
 device = torch.device('cpu')
 
 # shapモジュール用とテスト画像用のためのデータセットをロード
-train_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('mnist_data', train=True, download=True,
-                   transform=transforms.Compose([
-                       transforms.ToTensor()
-                   ])),
-    batch_size=batch_size, shuffle=True)
+# train_loader = torch.utils.data.DataLoader(
+#     datasets.MNIST('mnist_data', train=True, download=True,
+#                    transform=transforms.Compose([
+#                        transforms.ToTensor()
+#                    ])),
+#     batch_size=batch_size, shuffle=True)
 
 # # プログレスバーを適切に伸ばす
 # my_bar.progress(0.85, text=progress_text)
 
 test_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('mnist_data', train=False, transform=transforms.Compose([
+    datasets.MNIST('./', train=False, download=True, 
+                   transform=transforms.Compose([
                        transforms.ToTensor()
                    ])),
     batch_size=batch_size, shuffle=True)

@@ -20,7 +20,10 @@
  4. AIは数字のどこを見て予測したかをヒートマップで表示する。（ここがXAIです）
  5. このアプリをデプロイする。
 
-https://kikagaku17xainumber-ver000.streamlit.app/
+デプロイ URLs
+- Remote repositories on Github : https://github.com/Tsubakiminami/kikagaku_self-task_st_fastapi
+- Backend server by FastAPI on Render : https://kikagaku-self-task-st-fastapi.onrender.com/
+- Frontend by Streamlit : https://kikagaku-self-task-st-fastapi.streamlit.app/　このURLから開きます。
 
 受講コース期間：令和5年(2023)8月〜令和6年1月
 
